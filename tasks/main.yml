@@ -21,7 +21,7 @@
 - name: Lighthouse | Upload config
   become: true
   ansible.builtin.template:
-    src: ./templates/nginx.j2
+    src: nginx.j2
     dest: /etc/nginx/sites-enabled/default
     mode: "0766"
     owner: "{{ ansible_user }}"
