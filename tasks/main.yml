@@ -16,7 +16,7 @@
   become: true
   ansible.builtin.git:
     repo: 'https://github.com/VKCOM/lighthouse.git'
-    dest: {{ path }}
+    dest: "{{ path }}""
     version: master
 - name: Lighthouse | Upload config
   become: true
