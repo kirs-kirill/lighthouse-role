@@ -1,12 +1,38 @@
-# Ansible Role: Lighthouse
+Ubuntu-lighthouse
+=========
 
-[![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
+Install Nginx+Lighthouse
 
-## Description
+Requirements
+------------
 
-This role can install and configure Vector for Clickhouse on Ubuntu 20.04+
+Ubuntu 20.04+
 
+Role Variables
+--------------
 
-## Requirements
+| Variable | Default | Description
+|-|-|-|
+| `path`  | `/home/{{ansible_user}}/lightgouse` | Path to install Lighthouse |
 
-- Ansible >= 2.18 (It might work on previous versions, but we cannot guarantee it)
+Example Playbook
+----------------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: lighthouse-hosts
+      roles:
+         - lighthouse
+      become: true
+      vars:
+         - path: "/home"
+
+License
+-------
+
+MIT
+
+Author Information
+------------------
+
+Kirill Kirsanov for Netology HW
